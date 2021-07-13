@@ -1,0 +1,114 @@
+body {
+    background: #E8EFF0;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 1px 4px #BED1D4;
+    border-radius: 2px;
+}
+a {
+    color: #4267B2;
+    text-decoration: none;
+}
+input {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+.site-name {
+    text-align: center;
+    font-size: 45px;
+}
+.tagline {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin: 0 0 20px 0;
+}
+.button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.button:hover {
+    transition: background-color ease 0.2s;
+    color: #fff;
+    border-color: transparent;
+    background-color: #4267B2;
+}
+.button:hover a {
+    color: #fff;
+}
+.content {
+    text-align: center;
+}
+.announcement-wrapper {
+    padding: 10px 50px;
+}
+.announcement-wrapper .announcement-title {
+    margin: 0;
+    font-size: 30px;
+}
+.announcement-wrapper .announcement-author p {
+    margin: 0;
+    font-size: 23px;
+}
+.announcement-wrapper .announcement-content {
+    font-size: 20px;
+}
+.announcement-wrapper .announcement-date {
+    color: #777;
+}
+.all-announcements .announcement-date {
+    text-align: right;
+}
+.content .comments-wrapper {
+    padding: 0 45px;
+    text-align: left;
+}
+.content .comments-wrapper h3 {
+    text-align: center;
+}
+.comment-wrapper {
+    padding: 15px 0;
+}
+.comment {
+    padding: 10px;
+    border: 1px dotted #000;
+}
+.comment h4,
+.comment p {
+    margin: 0;
+}
+.input-wrapper {
+    padding: 10px 0;
+}
+.input-wrapper label {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper label input {
+    width: 50%;
+}
+.input-wrapper label textarea {
+    max-width: 100%;
+    min-height: 400px;
+}
+.single .input-wrapper label textarea {
+    max-width: 100%;
+    min-height: 50px;
+}
+.comment-form .button {
+    margin: 0 0 0 auto;
+}

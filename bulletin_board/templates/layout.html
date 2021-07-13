@@ -1,0 +1,9 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}</title>
+<link rel=stylesheet href="/static/style.css" type="text/css" />
+<link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+<div class="container">
+  <h1 class="site-name"><a href="/">Bulletin Board</a></h1>
+  <p class="tagline">You can read here announcements and leave comments if you want</p>
+  {% block body %}{% endblock %}
+</div>

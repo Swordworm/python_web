@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Bulletin Board{% endblock %}
+{% block body %}
+  <button class="button add-button">
+      <a href="/new">
+        Add announcement
+      </a>
+  </button>
+  <div class="content all-announcements">
+    {% if not announcements %}
+      <h2>No announcements found</h2>
+    {% else %}
+      {% for announcement in announcements %}
+        <div class="announcement-wrapper">
+          <h2><a href="/{{ announcement['id'] }}" class="announcement-title">{{ announcement['title'] }}</a></h2>
+          <div class="announcement-content">
+            <p>
+              {{ announcement['content'] }}
+            </p>
+          </div>
+          <div class="announcement-date">
+            <p>
+              {% if announcement['is_edited'] %}
+                Last edited:
+              {% endif %}
+              {{ announcement['timestamp'] }}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

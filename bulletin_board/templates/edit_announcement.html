@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Add Announcement{% endblock %}
+{% block body %}
+  <form method="post">
+    <div class="input-wrapper">
+      <label>
+        Title:
+        <input name="title" type="text" value="{{ title }}" maxlength="100" required/>
+      </label>
+    </div>
+    <div class="input-wrapper">
+      <label>
+        Your name:
+        <input name="author" type="text" value="{{ author }}" maxlength="100" required/>
+      </label>
+    </div>
+    <div class="input-wrapper">
+      <label>
+        Content:
+        <textarea name="content" maxlength="1000" required>{{ content }}</textarea>
+      </label>
+    </div>
+    <input class="button" type="submit" value="Save">
+  </form>
+{% endblock %}

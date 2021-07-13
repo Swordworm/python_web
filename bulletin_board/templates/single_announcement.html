@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block title %}Add Announcement{% endblock %}
+{% block body %}
+  <div class="content single">
+    <div class="announcement-wrapper">
+      <h2 class="announcement-title">
+        {{ title }}
+      </h2>
+      <div class="announcement-author">
+        <p>
+          by {{ author }}
+        </p>
+      </div>
+      <a href="/{{ id }}/edit">
+        Edit
+      </a>
+      <div class="announcement-date">
+        <p>
+          {% if edited %}
+            Last edited:
+          {% endif %}
+          {{ timestamp }}
+        </p>
+      </div>
+      <div class="announcement-content">
+        <p>
+          {{ content }}
+        </p>
+      </div>
+    </div>
+    <div class="comments-wrapper">
+      <h3>Comments</h3>
+      {% for comment in comments %}
+        <div class="comment-wrapper">
+          <div class="comment">
+            <h4>{{ comment['commentator'] }}</h4>
+            <p>{{ comment['comment_text'] }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      <form class="comment-form" action="" method="post">
+        <div class="input-wrapper">
+          <label>
+            Your name:
+            <input name="commentator-name" type="text" maxlength="100" required/>
+          </label>
+        </div>
+        <div class="input-wrapper">
+          <label>
+            Comment:
+            <textarea name="comment" placeholder="Write your comment here..." maxlength="200" required></textarea>
+          </label>
+        </div>
+        <input class="button" type="submit" value="Add comment" />
+      </form>
+    </div>
+  </div>
+{% endblock %}

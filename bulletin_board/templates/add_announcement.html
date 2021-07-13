@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}Add Announcement{% endblock %}
+{% block body %}
+  <form method="post">
+    <div class="input-wrapper">
+      <label>
+        Title:
+        <input name="title" type="text" maxlength="100" required/>
+      </label>
+    </div>
+    <div class="input-wrapper">
+      <label>
+        Your name:
+        <input name="author" type="text" maxlength="100" required/>
+      </label>
+    </div>
+    <div class="input-wrapper">
+      <label>
+        Content:
+        <textarea name="content" placeholder="Please enter your announcement here..." maxlength="1000" required></textarea>
+      </label>
+    </div>
+    <input class="button" type="submit" value="Add">
+  </form>
+{% endblock %}
